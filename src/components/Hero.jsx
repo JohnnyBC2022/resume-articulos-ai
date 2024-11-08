@@ -21,8 +21,9 @@ const Hero = () => {
         <span className="blue_gradient">Open AI GPT-4</span>
       </h1>
       <h2 className="desc">
-        Ahorra tiempo de lectura con ResAI, una aplicación para resumir artículos de código abierto que transforma artículos extensos en resúmenes claros y
-        concisos.
+        Ahorra tiempo de lectura con ResAI, una aplicación para resumir
+        artículos de código abierto que transforma artículos extensos en
+        resúmenes claros y concisos.
       </h2>
     </header>
   );
