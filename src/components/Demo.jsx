@@ -8,7 +8,6 @@ const Demo = () => {
     summary: "",
   });
 
-  
   const [allArticles, setAllArticles] = useState([]);
   const [copied, setCopied] = useState("");
 
@@ -37,9 +36,9 @@ const Demo = () => {
 
       setArticle(newArticle);
 
-      console.log(newArticle);
-
       localStorage.setItem("articles", JSON.stringify(updatedAllArticles));
+
+      //setArticle({ url: "", summary: "" });
     }
   };
 
@@ -49,7 +48,7 @@ const Demo = () => {
     setTimeout(() => {
       setCopied(false);
     }, 3000);
-  }
+  };
 
   return (
     <section className="mt-16 w-full max-w-xl">
@@ -92,9 +91,14 @@ const Demo = () => {
               onClick={() => setArticle(item)}
               className="link_card"
             >
-              <div className="copy_btn" onClick={()=>{handleCopy(item.url)}}>
+              <div
+                className="copy_btn"
+                onClick={() => {
+                  handleCopy(item.url);
+                }}
+              >
                 <img
-                  src={copied === item.url ? tick: copy}
+                  src={copied === item.url ? tick : copy}
                   alt="copy_icon"
                   className="w-[40%] h-[40%] object-contain"
                 />
